@@ -107,7 +107,12 @@ class CIMCreateCardRequest extends CIMAbstractRequest
                         // so use it
                         $req->{$field} = $value;
                     }
-                }
+		}
+            }
+
+            $phone = $card->getBillingPhone();
+            if (!empty($phone)) {
+                $req->phoneNumber = $phone;
             }
 
             $req = $data->addChild('payment');

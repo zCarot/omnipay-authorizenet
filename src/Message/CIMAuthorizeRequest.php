@@ -37,6 +37,16 @@ class CIMAuthorizeRequest extends AIMAuthorizeRequest
             $req->order->description = $description;
         }
 
+        $invoiceNumber = $this->getInvoiceNumber();
+        if (!empty($invoiceNumber)) {
+            $action->order->invoiceNumber = $invoiceNumber;
+        }
+
+        $desc = $this->getDescription();
+        if (!empty($desc)) {
+            $action->order->description = $desc;
+        }
+
         return $data;
     }
 
