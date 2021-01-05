@@ -72,16 +72,6 @@ abstract class CIMAbstractRequest extends AIMAbstractRequest
         return $this->getParameter('customerPaymentProfileId');
     }
 
-    public function getInvoiceNumber()
-    {
-        return $this->getParameter('invoiceNumber');
-    }
-
-    public function setInvoiceNumber($value)
-    {
-        return $this->setParameter('invoiceNumber', $value);
-    }
-
     /**
      * Flag to force update consumer payment profile if duplicate is found
      *
